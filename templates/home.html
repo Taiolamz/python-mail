@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JT Sports</title>
+    <link rel="shortcut icon" type="image" href="../static/assets/icons8-football-64.png" />
+    <link href="../static/css/home.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo">JT SPORTS</h2> 
+        <div class="toggle"></div>
+      </header>
+      <video src="../static/assets/mp4/bg.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Next Version</h2>
+        <h3>Exploring the world of Sports</h3>
+        <p>
+          Find the latest sport news from around the world with in-depth
+          analysis, features, photos and videos covering football, tennis,
+          motorsport, golf, rugby, and many more...
+        </p>
+        <form action="{{url_for('send_message') }}" method="POST">
+          <label for="Email">Subscribe to our NewsFeed</label>
+          <input
+            class="input-text"
+            id="email"
+            required
+            id=""
+            type="email"
+            name="email"
+            placeholder="Enter email address..."
+            aria-label="Enter email address..."
+          />
+          <input class="input-btn" type="submit" value="Subscribe" />
+        </form>
+      </div>
+      <ul class="social">
+        <li>
+          <a href="#"
+            ><img src="../static/assets/img/icons8-facebook-f-60.png"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../static/assets/img/icons8-twitter-50.png"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../static/assets/img/icons8-instagram-50.png"
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
